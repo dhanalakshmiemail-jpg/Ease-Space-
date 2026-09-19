@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EaseSpace - Student Wellness Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>Ease<span>Space</span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mood">Mood</a></li>
+            <li><a href="#relax">Relax</a></li>
+            <li><a href="#reflect">Reflect</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+
+        <button id="themeBtn" class="theme-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+    </nav>
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            YOUR SPACE TO BREATHE & GROW
+        </p>
+
+        <h1>
+            Pause. <span>Breathe.</span><br>
+            Grow.
+        </h1>
+
+        <p class="hero-text">
+            A simple wellness space designed for students to manage
+            stress, build confidence, develop healthy habits and
+            take care of their personal growth.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#mood" class="primary-btn">
+                Start Your Journey
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#relax" class="secondary-btn">
+                Explore Activities
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="floating-card card-one">
+            <i class="fa-solid fa-face-smile"></i>
+            <div>
+                <strong>How are you?</strong>
+                <p>Check your mood</p>
+            </div>
+        </div>
+
+        <div class="circle">
+            <i class="fa-solid fa-leaf"></i>
+        </div>
+
+        <div class="floating-card card-two">
+            <i class="fa-solid fa-heart"></i>
+            <div>
+                <strong>Take a break</strong>
+                <p>You deserve it 🌿</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUICK FEATURES ================= -->
+
+<section class="quick-section">
+
+    <div class="section-heading">
+        <p>YOUR WELLNESS SPACE</p>
+        <h2>Small steps can make a difference.</h2>
+    </div>
+
+    <div class="quick-grid">
+
+        <a href="#mood" class="quick-card">
+            <div class="icon purple">
+                <i class="fa-solid fa-face-smile"></i>
+            </div>
+            <h3>Mood Check</h3>
+            <p>Understand how you are feeling today.</p>
+        </a>
+
+        <a href="#relax" class="quick-card">
+            <div class="icon green">
+                <i class="fa-solid fa-wind"></i>
+            </div>
+            <h3>Relax Zone</h3>
+            <p>Take a moment to breathe and relax.</p>
+        </a>
+
+        <a href="#goals" class="quick-card">
+            <div class="icon orange">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3>Set Goals</h3>
+            <p>Turn small intentions into daily goals.</p>
+        </a>
+
+        <a href="#journal" class="quick-card">
+            <div class="icon blue">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Journal</h3>
+            <p>Write your thoughts in your private space.</p>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOOD ================= -->
+
+<section id="mood" class="section">
+
+    <div class="section-heading">
+        <p>MOOD CHECK-IN</p>
+        <h2>How are you feeling today?</h2>
+        <span>There is no right or wrong answer.</span>
+    </div>
+
+    <div class="mood-container">
+
+        <button class="mood-card" onclick="selectMood('Happy 😄', this)">
+            <span>😄</span>
+            <p>Happy</p>
+        </button>
+
+        <button class="mood-card" onclick="selectMood('Good 🙂', this)">
+            <span>🙂</span>
+            <p>Good</p>
+        </button>
+
+        <button class="mood-card" onclick="selectMood('Okay 😐', this)">
+            <span>😐</span>
+            <p>Okay</p>
+        </button>
+
+        <button class="mood-card" onclick="selectMood('Sad 😔', this)">
+            <span>😔</span>
+            <p>Sad</p>
+        </button>
+
+        <button class="mood-card" onclick="selectMood('Stressed 😫', this)">
+            <span>😫</span>
+            <p>Stressed</p>
+        </button>
+
+    </div>
+
+    <div id="moodMessage" class="message-box">
+        Select a mood to check in.
+    </div>
+
+</section>
+
+
+<!-- ================= RELAX ================= -->
+
+<section id="relax" class="section light-section">
+
+    <div class="section-heading">
+        <p>RELAX ZONE</p>
+        <h2>Take a moment for yourself.</h2>
+        <span>Choose a simple activity and give yourself a break.</span>
+    </div>
+
+    <div class="relax-grid">
+
+        <div class="activity-card">
+
+            <div class="activity-icon">
+                <i class="fa-solid fa-wind"></i>
+            </div>
+
+            <h3>Breathing Exercise</h3>
+
+            <p>
+                Follow the breathing circle and take slow,
+                comfortable breaths.
+            </p>
+
+            <div class="breathing-circle" id="breathingCircle">
+                <span id="breathingText">Ready</span>
+            </div>
+
+            <button class="primary-btn" onclick="startBreathing()">
+                Start Breathing
+            </button>
+
+        </div>
+
+
+        <div class="activity-card">
+
+            <div class="activity-icon">
+                <i class="fa-solid fa-shuffle"></i>
+            </div>
+
+            <h3>Random Activity</h3>
+
+            <p id="activityText">
+                Need an idea? Let us choose something for you.
+            </p>
+
+            <div class="random-box">
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+            <button class="primary-btn" onclick="randomActivity()">
+                Give Me Something To Do
+            </button>
+
+        </div>
+
+
+        <div class="activity-card">
+
+            <div class="activity-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <h3>Focus Timer</h3>
+
+            <p>
+                Take focused time for your studies or personal goals.
+            </p>
+
+            <div id="timer">25:00</div>
+
+            <div class="timer-buttons">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REFLECTION ================= -->
+
+<section id="reflect" class="section">
+
+    <div class="section-heading">
+        <p>SELF REFLECTION</p>
+        <h2>Get to know yourself better.</h2>
+        <span>A few minutes of reflection can help you notice your growth.</span>
+    </div>
+
+    <div class="reflection-box">
+
+        <label>What is one thing you are proud of?</label>
+        <textarea id="reflection1"
+            placeholder="Write your answer..."></textarea>
+
+        <label>What is one thing you want to improve?</label>
+        <textarea id="reflection2"
+            placeholder="Write your answer..."></textarea>
+
+        <label>What are you grateful for today?</label>
+        <textarea id="reflection3"
+            placeholder="Write your answer..."></textarea>
+
+        <button class="primary-btn" onclick="saveReflection()">
+            Save Reflection
+        </button>
+
+        <p id="reflectionMessage"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMMUNICATION ================= -->
+
+<section class="section communication-section">
+
+    <div class="section-heading">
+        <p>CONFIDENCE & COMMUNICATION</p>
+        <h2>Challenge yourself.</h2>
+        <span>Small challenges can help you become more confident.</span>
+    </div>
+
+    <div class="challenge-card">
+
+        <div class="challenge-number">
+            01
+        </div>
+
+        <div class="challenge-content">
+
+            <p>TODAY'S CHALLENGE</p>
+
+            <h3>
+                Introduce yourself confidently
+                to someone new.
+            </h3>
+
+            <span>
+                Speak for 30 seconds without looking at your phone.
+            </span>
+
+            <button id="challengeBtn"
+                class="primary-btn"
+                onclick="completeChallenge()">
+                Complete Challenge
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GOALS ================= -->
+
+<section id="goals" class="section light-section">
+
+    <div class="section-heading">
+        <p>PERSONAL GOALS</p>
+        <h2>What do you want to achieve?</h2>
+        <span>Create small goals and track your progress.</span>
+    </div>
+
+    <div class="goal-container">
+
+        <div class="goal-form">
+
+            <input
+                type="text"
+                id="goalInput"
+                placeholder="Enter your goal...">
+
+            <button class="primary-btn" onclick="addGoal()">
+                <i class="fa-solid fa-plus"></i>
+                Add Goal
+            </button>
+
+        </div>
+
+        <div id="goalList"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JOURNAL ================= -->
+
+<section id="journal" class="section">
+
+    <div class="section-heading">
+        <p>PRIVATE JOURNAL</p>
+        <h2>Your thoughts, your space.</h2>
+        <span>Write down anything you want to remember.</span>
+    </div>
+
+    <div class="journal-box">
+
+        <div class="journal-header">
+            <h3>Today's Journal</h3>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <textarea
+            id="journalText"
+            placeholder="How was your day? Write your thoughts here..."></textarea>
+
+        <div class="journal-buttons">
+
+            <button class="primary-btn" onclick="saveJournal()">
+                Save Entry
+            </button>
+
+            <button class="clear-btn" onclick="clearJournal()">
+                Clear
+            </button>
+
+        </div>
+
+        <p id="journalMessage"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard" class="section dashboard-section">
+
+    <div class="section-heading">
+        <p>MY DASHBOARD</p>
+        <h2>Your growth at a glance.</h2>
+        <span>Keep going. Every small step counts.</span>
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="stat-card">
+            <i class="fa-solid fa-face-smile"></i>
+            <h3 id="dashboardMood">Not selected</h3>
+            <p>Today's Mood</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-bullseye"></i>
+            <h3 id="goalCount">0</h3>
+            <p>Goals Added</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-check"></i>
+            <h3 id="completedGoals">0</h3>
+            <p>Goals Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-fire"></i>
+            <h3 id="challengeCount">0</h3>
+            <p>Challenges Completed</p>
+        </div>
+
+    </div>
+
+    <div class="progress-box">
+
+        <div class="progress-header">
+            <h3>Overall Progress</h3>
+            <strong id="progressPercent">0%</strong>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+
+        <p>
+            Keep taking small steps toward your personal growth.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        <i class="fa-solid fa-leaf"></i>
+        EaseSpace
+    </div>
+
+    <p>
+        Pause. Breathe. Grow. 🌿
+    </p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#mood">Mood</a>
+        <a href="#relax">Relax</a>
+        <a href="#goals">Goals</a>
+        <a href="#journal">Journal</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 EaseSpace. Student Wellness & Personal Growth Hub.
+    </p>
+
+</footer>
+
+
+<script src="j5.js"></script>
+
+</body>
+</html>
